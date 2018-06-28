@@ -203,6 +203,43 @@ exports.getTransactionsUsingGET = function() {
           id: 2,
           idWallet: 2,
           updated: "2018-05-30T07:16:47.000+00:00"
+        },
+        {
+          urlRedirectPSP: "urlRedirectPSP",
+          amount: {
+            amount: 900,
+            currencyNumber: "currencyNumber",
+            currency: "EUR",
+            decimalDigits: 2
+          },
+          paymentModel: 2,
+          idPsp: 1,
+          grandTotal: {
+            amount: 99,
+            currencyNumber: "currencyNumber",
+            currency: "EUR",
+            decimalDigits: 2
+          },
+          created: "2017-05-30T07:16:47.000+00:00",
+          fee: {
+            amount: 999,
+            currencyNumber: "currencyNumber",
+            currency: "EUR",
+            decimalDigits: 2
+          },
+          description: "Duplicato patente",
+          merchant: "Motorizzazione Civile di Torino",
+          error: false,
+          statusMessage: "statusMessage",
+          token: "token",
+          idPayment: 9,
+          idStatus: 0,
+          nodoIdPayment: "nodoIdPayment",
+          success: true,
+          urlCheckout3ds: "urlCheckout3ds",
+          id: 3,
+          idWallet: 2,
+          updated: "2017-05-30T07:16:47.000+00:00"
         }
       ],
       size: 0,
