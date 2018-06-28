@@ -1,0 +1,3 @@
+applications:
+- name: pagopa-mock-rest
+  memory: 128M
