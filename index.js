@@ -28,9 +28,12 @@ swaggerTools.initializeMiddleware(swaggerDoc, function(middleware) {
    * Then, ignore it
    */
   app.use((req, res, next) => {
+    console.log(req.method + " " + req.url);
     if (
-      req.headers.authorization === undefined ||
-      !req.headers.authorization.match(/^bearer .+$/i)
+      (req.headers.authorization === undefined ||
+        !req.headers.authorization.match(/^bearer .+$/i)) &&
+      !req.url.startsWith("/docs") &&
+      !req.url.startsWith("/api-docs")
     ) {
       res.writeHead(401); // Unauthorized if the header is not set
       res.end();
