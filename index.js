@@ -23,6 +23,21 @@ var swaggerDoc = jsyaml.safeLoad(spec);
 // Initialize the Swagger middleware
 swaggerTools.initializeMiddleware(swaggerDoc, function(middleware) {
   /**
+   * Reset file(s)
+   */
+  app.use((req, res, next) => {
+    if (req.url === "/reset") {
+      fs.createReadStream("cards.orig.json").pipe(
+        fs.createWriteStream("cards.json")
+      );
+      res.writeHead(200);
+      res.end();
+    } else {
+      next();
+    }
+  });
+
+  /**
    * Make sure the requester is sending an
    * "Authorization: Bearer <token>" header.
    * Then, ignore it
@@ -33,7 +48,7 @@ swaggerTools.initializeMiddleware(swaggerDoc, function(middleware) {
       (req.headers.authorization === undefined ||
         !req.headers.authorization.match(/^bearer .+$/i)) &&
       !req.url.startsWith("/docs") &&
-      !req.url.startsWith("/api-docs")
+      !req.url.startsWith("/api")
     ) {
       res.writeHead(401); // Unauthorized if the header is not set
       res.end();
