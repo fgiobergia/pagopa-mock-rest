@@ -2,7 +2,8 @@
 
 var fs = require("fs"),
   path = require("path"),
-  http = require("http");
+  http = require("http"),
+  cors = require("cors");
 
 var app = require("connect")();
 var swaggerTools = require("swagger-tools");
@@ -36,6 +37,16 @@ swaggerTools.initializeMiddleware(swaggerDoc, function(middleware) {
       next();
     }
   });
+
+  // app.use(function(req, res, next) {
+  //   res.set({
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Headers":
+  //       "Origin, X-Requested-With, Content-Type, Accept"
+  //   });
+  //   next();
+  // });
+  app.use(cors());
 
   /**
    * Make sure the requester is sending an
