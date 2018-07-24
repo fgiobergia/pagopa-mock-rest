@@ -24,7 +24,7 @@
         "lingua": "IT",
         "idCard": 6,
         "fixedCost": {
-          "amount": 0,
+          "amount": 150,
           "currencyNumber": "currencyNumber",
           "currency": "currency",
           "decimalDigits": 6
@@ -71,7 +71,7 @@
         "lingua": "IT",
         "idCard": 6,
         "fixedCost": {
-          "amount": 0,
+          "amount": 200,
           "currencyNumber": "currencyNumber",
           "currency": "currency",
           "decimalDigits": 6
@@ -118,7 +118,7 @@
         "lingua": "IT",
         "idCard": 6,
         "fixedCost": {
-          "amount": 0,
+          "amount": 125,
           "currencyNumber": "currencyNumber",
           "currency": "currency",
           "decimalDigits": 6
