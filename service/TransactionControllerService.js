@@ -178,14 +178,14 @@ exports.getTransactionsUsingGET = function() {
           paymentModel: 2,
           idPsp: 1,
           grandTotal: {
-            amount: 65,
+            amount: 7400,
             currencyNumber: "currencyNumber",
             currency: "EUR",
             decimalDigits: 2
           },
           created: "2018-05-30T07:16:47.000+00:00",
           fee: {
-            amount: 7400,
+            amount: 65,
             currencyNumber: "currencyNumber",
             currency: "EUR",
             decimalDigits: 2
